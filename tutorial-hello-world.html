@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<!-- Tutorial link: https://www.jspsych.org/tutorials/hello-world/ -->
+
+<html>
+	<head>
+		<title>Hello World Tutorial</title>
+		<script src="jspsych-6.3.1/jspsych.js"></script>   <!--LOAD THE JSPSYCH LIBRARY-->
+		<script src="jspsych-6.3.1/plugins/jspsych-html-keyboard-response.js"></script> <!--load a keyboard response plugin-->
+		<link href="jspsych-6.3.1/css/jspsych.css" rel="stylesheet" type="text/css">   <!--LOAD THE JSPSYCH CSS STYLESHEET-->
+	</head>
+	
+	<body></body>
+	
+	<!--JSPSYCH SCRIPT-->
+	<script>
+		
+		/* define the trial - displays text, ends the trial after any key press */
+		var hello_trial = {
+			type: 'html-keyboard-response',
+			stimulus:'Hello world!'
+		};
+		
+		/* initialize the experiment */
+		jsPsych.init({
+			timeline: [hello_trial]
+		});
+			
+	</script>	
+</html>
